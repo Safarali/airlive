@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.3'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -14,6 +13,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '~> 5.0'
 gem 'font-awesome-sass'
 gem "paperclip", "~> 4.3" # It works with Imagemagick. For photos.
+gem 'aws-sdk', '< 2.0'
 
 
 
@@ -49,5 +49,13 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+end
+
+group :production do
+	gem 'pg', '0.17.1'
+	gem 'rails_12factor', '0.0.2'
+    gem 'puma', '2.11.1'
 end
 
