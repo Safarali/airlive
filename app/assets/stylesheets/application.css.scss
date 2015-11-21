@@ -1,0 +1,18 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "toastr";
+@import 'custom/buttons';
+@import 'custom/navbar';
+@import 'custom/forms';
+@import 'custom/bodymain';
+@import 'custom/typography';
+@import 'custom/content';
+@import 'custom/room_show';
+@import url('//fonts.googleapis.com/css?family=Lato');
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+$font-family: Circular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+

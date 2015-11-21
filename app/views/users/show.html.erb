@@ -1,0 +1,29 @@
+<% provide(:title, @user.fullname) %>
+
+<div class="panel-body">
+  <div class="row">
+	<div class="col-md-3">
+	<% if current_user.avatar.present? %>
+	  <div class="center">
+	  <%= image_tag current_user.avatar.url, class: "avatar-full" %>	
+	  </div>
+	  <% end %>
+		<div class="panel panel-default profile">
+		  <div class="user-show"><div class="panel-heading">Verification</div></div>
+		    <div class="panel-body">
+				<%= @user.email %><br>
+				<%= @user.phone_number %>
+		    </div>
+		</div>	
+	</div>
+	  <div class="col-md-9">
+		  <h2><%= @user.fullname %></h2>
+
+		  <div class="description row-space-3">
+		  <%= @user.description %>
+		  </div>
+	  </div>
+  </div>
+ </div>
+
+

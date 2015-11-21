@@ -1,0 +1,159 @@
+.btn-primary.btn {
+  border: 1px solid #ff5a5f;
+  border-radius: 2px;
+  font-weight: bold;
+  background-color: #ff5a5f;
+  color: #fff;
+  padding: 10px 25px 10px 25px;
+  width: 100%;
+  font-size: 15px;
+  
+  
+}
+
+.btn-primary.btn:hover, .btn-primary.btn:focus {
+  border-color: #ff7e82;
+  border-bottom-color: #fa0008;
+  background-color: #ff7e82;  
+  outline: none;
+}
+
+.btn-primary.btn:active {
+  border-color: #e00007;
+  background-color: #e00007;  
+  outline:none;
+}
+
+
+
+/* For facebook button */
+
+.fbb .btn-primary.btn {
+  background-color: #3B5998;
+  border: 1px solid #3B5998;
+  width: 100%;
+  margin-top: 10px;
+ } 
+
+
+.fbb .btn-primary.btn:hover {
+  border-color: #3B5998;
+  border-bottom-color: #3B5998; 
+  background-color: #4e69a2; 
+  outline: none;
+}
+
+/* Google button */
+
+.google-button .btn-primary.btn {
+  background-color: #fff;
+  border: 2px solid #EF5350;
+  width: 100%;
+  margin-top: 10px;
+  color: #F44336
+ } 
+
+
+.google-button .btn-primary.btn:hover {
+  border-color: #EF5350;
+  border-bottom-color: #EF5350;  
+  outline: none;
+}
+
+/* Customizing Room-create form's button */
+.actions #btn-create-room {
+  background-color: #e00007;
+  width: 200px;
+  border-radius: 2px;
+  
+}
+
+.actions #btn-create-room:hover {
+  background-color: #ff5a5f;
+ 
+}
+
+/* Customizing Update-profile form */
+
+.actions #btn-update-profile {
+  background-color: #e00007;
+  width: 200px;
+  border-radius: 2px;
+  }
+
+.actions #btn-update-profile:hover {
+  background-color: #ff5a5f;
+ 
+}
+
+/* Login/Sign up seperator */
+ .signup-or-seperator {
+  background: none;
+  height: 34px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 15px;
+ }
+
+ .signup-or-seperator hr {
+  margin: -16px auto 10px auto;
+  width: 80%;
+  border: 0;
+  border-top: 1px solid #dce0e0;
+  height: 0;
+
+ }
+
+ .signup-or-seperator--text {
+  background-color: #fff;
+  display: inline-block;
+  padding: 1px;
+ }
+
+
+/* For file upload button */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #00d1c1;
+    color: #00d1c1;
+    width: 100%;
+    border-radius: 2px;
+    padding: 10px 0;
+}
+
+.btn-file:hover, .btn-file:focus, .btn-file:active, .btn-file:visited {
+  background-color: white;
+  color: #00d1c1;
+  border: 3px solid #00d1c1;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: left;
+    filter: alpha(opacity=0);
+    outline: none;
+    cursor: inherit;
+    display: block;
+
+}
+
+.btn-warning.btn {
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+
+.navbar-default {
+  background-color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand {
+  color: #e00007;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #ff7e82;
+}
+
+.navbar .nav > li > a {
+	color: #e00007;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.navbar .nav > li > a:hover, .navbar .nav > li > a:focus  {
+	color: #ff7e82;
+}
+
+
+
