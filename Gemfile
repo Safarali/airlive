@@ -40,7 +40,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
-group :development, :test do
+group :development do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -56,6 +56,6 @@ end
 group :production do
 	gem 'pg', '0.17.1'
 	gem 'rails_12factor', '0.0.2'
-    gem 'puma', '2.11.1'
+  gem 'puma', '2.11.1'
 end
 
