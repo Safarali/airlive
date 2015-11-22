@@ -16,7 +16,8 @@
 			<div class="col-md-8">
 				<div class="row">
 					<div class="col-md-3 text-center">
-						<%= image_tag current_user.avatar.url, class: "img-circle avatar-large" %> <br><br>
+					<% if current_user.avatar.present? %>
+						<%= image_tag current_user.avatar.url, class: "img-circle avatar-large" %> <% end %><br><br>
 						<%= @room.user.fullname %>
 					</div>
 
