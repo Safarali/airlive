@@ -12,8 +12,8 @@ gem 'bootstrap-sass', '~> 3.3.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'font-awesome-sass'
-gem "paperclip", "~> 4.3" # It works with Imagemagick. For photos.
-gem 'aws-sdk', '< 2.0'
+gem "paperclip"
+gem 'aws-sdk'
 
 
 
