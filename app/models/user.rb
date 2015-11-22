@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   
 
 
-  has_attached_file :avatar, dependent: :destroy, 
+  has_attached_file :avatar, dependent: :destroy
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
 
   
