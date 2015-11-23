@@ -11,9 +11,7 @@ class User < ActiveRecord::Base
 
 
   has_attached_file :avatar, dependent: :destroy,
-                    :storage => :s3,
-                    :bucket => 'S3_BUCKET_NAME',
-                    :s3_credentials => 'S3_CREDENTIALS'
+                    :storage => :s3
   validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png"]
   
 
