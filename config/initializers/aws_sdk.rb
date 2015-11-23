@@ -1,5 +1,5 @@
 if Rails.env.production?
-  AWS_SDK.configure do |config|
+  AWSSDK.configure do |config|
     config.paperclip_credentials = {
       # Configuration for Amazon S3
       :provider              => 'AWS',
