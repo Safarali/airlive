@@ -22,7 +22,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.serve_static_files = false
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -94,13 +94,11 @@ config.action_mailer.raise_delivery_errors = true
   }
 
   config.paperclip_defaults = {
-      :storage => :s3,
-      :s3_credentials => {
-        :provider => "AWS",
-        :aws_access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-        :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-      },
-      :s3_directory => ENV["S3_BUCKET_NAME"]
-    }
-
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => 'airlive'
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  }
+}
 end
