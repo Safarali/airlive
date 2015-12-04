@@ -16,8 +16,9 @@
 				<% room.reservations.each do |reservation| %>
 				<div class="row">
 					<div class="col-md-3">
+					<% if reservation.user.avatar.present? %>
 						<%= link_to user_path(reservation.user) do %>
-						<%= image_tag reservation.user.avatar.url, class: "img-circle avatar-medium" %> <% end %><br>
+						<%= image_tag reservation.user.avatar.url, class: "img-circle avatar-medium" %> <% end %><% end %><br>
 						<strong><%= reservation.user.fullname %></strong><br>
 						Your Guest
 
