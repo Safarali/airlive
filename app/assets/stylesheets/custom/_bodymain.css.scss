@@ -1,10 +1,3 @@
-body {  
-  color: #565a5c;
-  background-color: #F8F8F8;
-  padding-top: 80px;
-  font-weight: normal;
-}
-
 
 .avatar-small {
 	width: 24px;
@@ -24,5 +17,18 @@ body {
 	width: 100%;
 }
 
+.row-space-1 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
 
+.row-space-2 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.row-space-3 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
 

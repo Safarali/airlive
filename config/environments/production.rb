@@ -93,12 +93,4 @@ config.action_mailer.raise_delivery_errors = true
     :enable_starttls_auto => true
   }
 
-  config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => 'airlive',
-    :access_key_id => 'AKIAJWHROZ5ETEZ2FGHQ'
-    :secret_access_key => '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'
-  }
-}
 end

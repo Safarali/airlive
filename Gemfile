@@ -13,7 +13,12 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '~> 5.0'
 gem 'font-awesome-sass'
 gem 'paperclip', '~> 4.2.0'
-gem 'aws-sdk'
+gem 'geocoder'
+gem 'jquery-ui-sass-rails'
+gem 'private_pub'
+gem 'thin'
+
+
 
 
 

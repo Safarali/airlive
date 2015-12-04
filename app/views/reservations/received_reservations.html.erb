@@ -1,0 +1,44 @@
+<div class="panel-body space-maker">
+<div class="row">
+	<div class="col-md-2">
+		<ul class="sidebar-list">
+			<li class="sidebar-item"><%= link_to "Manage Your Listings", rooms_path, class: "sidebar-link" %></li>
+			<li class="sidebar-item"><%= link_to "Received Reservations", received_reservations_path, class: "sidebar-link active" %></li>
+		</ul>
+	</div>
+	<div class="col-md-10">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Received Reservations
+			</div>
+			<div class="panel-body text-center">
+			<% @rooms.each do |room| %>
+				<% room.reservations.each do |reservation| %>
+				<div class="row">
+					<div class="col-md-3">
+						<%= link_to user_path(reservation.user) do %>
+						<%= image_tag reservation.user.avatar.url, class: "img-circle avatar-medium" %> <% end %><br>
+						<strong><%= reservation.user.fullname %></strong><br>
+						Your Guest
+
+					</div>
+					<div class="col-md-3">
+						<h5><%= reservation.start_date.strftime('%v') %><br>
+						<%= reservation.end_date.strftime('%v') %></h5>
+					</div>
+					<div class="col-md-3">
+					    <%= link_to room_path(reservation.room) do %>
+						<h5><%= reservation.room.address %></h5> <% end %>
+					</div>
+					<div class="col-md-3">
+						<h4>$<%= reservation.total %></h4>
+					</div>
+				</div>
+				<hr>
+				<% end %>
+			<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

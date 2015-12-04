@@ -26,8 +26,9 @@ class RoomsController < ApplicationController
       end
 
       @photos = @room.photos
-      redirect_to edit_room_path(@room), notice: "Saved..."
+      redirect_to @room, notice: "You successfully listed your space"
     else
+      flash[:alert] = "Please provide all information for this room."
       render :new
     end
   end
@@ -36,7 +37,7 @@ class RoomsController < ApplicationController
     if current_user.id == @room.user.id
       @photos = @room.photos
     else
-      redirect_to root_path, notice: "You don't have permission."
+      redirect_to root_path, notice: "You are not authorized!!!"
     end
   end
 
@@ -49,9 +50,11 @@ class RoomsController < ApplicationController
         end
       end
 
-      redirect_to edit_room_path(@room), notice: "Updated..."
+      redirect_to @room, notice: "Your successfully updated your listing!"
     else
+      flash[:alert] = "Please provide all information for this room."
       render :edit
+
     end
   end
 

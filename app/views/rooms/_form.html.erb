@@ -1,13 +1,12 @@
 
-<div class="panel-body">
+<div class="panel-body space-maker">
 		<div class="panel panel-default">
 			<div class="panel-heading">List Your Space</div>
 			<div class="room-create-container-body">
 	         <div class="container">
 
 			<div class="panel-body">
-			   <%=form_for @room, :html => { multipart: true } do |f| %>
-
+			   <%=form_for @room, html: { multipart: true } do |f| %>
 			   	 <div class="row">
 			   	 	<div class="col-md-4 select">
 			   	 	  <div class="form-group">

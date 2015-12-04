@@ -7,11 +7,13 @@ class User < ActiveRecord::Base
   validates :fullname, presence: true, length: {maximum: 50}
 
   has_many :rooms, dependent: :destroy
+  has_many :reservations, dependent: :destroy
+
   
 
 
   has_attached_file :avatar, dependent: :destroy
-  validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png"]
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
   
 
   def self.from_omniauth(auth)

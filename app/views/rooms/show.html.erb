@@ -1,30 +1,35 @@
 <div class="container roomshow">
 <div class="panel panel-default">
 	<div class="panel-body">
-	<div class="container roomshow-body">
+	<div class="container-fluid">
 		<!-- Image -->
 		<div class="row">
 			<div class="col-md-12">
 				<%= image_tag @photos[0].image.url, class: "img-responsive" if @photos.length > 0 %>
+
 			</div>
 		</div>
 
 		<br>
+		
 
 		<!-- Main Info -->
 		<div class="row">
 			<div class="col-md-8">
 				<div class="row">
 					<div class="col-md-3 text-center">
-					<% if current_user.avatar.present? %>
-						<%= image_tag current_user.avatar.url, class: "img-circle avatar-large" %> <% end %><br><br>
+					<% if @room.user.avatar.present? %>
+					<%= link_to user_path(@room.user) do %>
+						<%= image_tag @room.user.avatar.url, class: "img-circle avatar-large" %><% end %><% end %><br><br>
 						<%= @room.user.fullname %>
+						<% if @room.user != current_user %>
+	  		<%= link_to "Send Message", conversations_path(sender_id: current_user.id, recipient_id: @room.user.id), method: 'post', id: "become_host", class: "btn btn-primary" %> <% end %>
 					</div>
 
-					<div class="col-md-9">
+					<div class="col-md-9 text-center">
 						<h4><%= @room.listing_name %></h4>
-						<%= @room.address %><br>
-						<div class="row text-center row-space-1">
+						<%= @room.address %><br><br>
+						<div class="row row-space-1">
 							<div class="col-sm-3">
 								<i class="fa fa-home fa-2x"></i><br>
 								<%= @room.home_type %>
@@ -43,14 +48,13 @@
 								<%= @room.bath_room %> <%= @room.bath_room > 1? "Bathrooms" : "Bathroom" %>
 							</div>
 						</div>
-					
 
 					</div>
 				</div>
 				
 			</div>
 			<div class="col-md-4">
-				<!-- Reservation Tool  will be here -->
+				<%= render 'reservations/form' %> 
 			</div>
 		</div>
 		<hr align="center" width="75%">
@@ -85,7 +89,7 @@
         				<p class="<%= 'text-line-through' if !@room.is_air %>">AC</p>
         			</div>
         			<div class="col-sm-2">
-        				<i class="fa fa-chevron-up fa-2x"></i><br>
+        				<i class="glyphicon glyphicon-fire"></i><br>
         				<p class="<%= 'text-line-through' if !@room.is_heating %>">Heating</p>
         			</div>
         		</div>
@@ -128,10 +132,65 @@
 						  </a>
 				</div>
 			</div>
-		</div>
+		</div> <br>
+	<hr align="center" width="75%"><br>
 
+		<!-- Google maps -->
+		<div class="row">
+			<div class="col-md-12">
+				<div id="map"></div>
+				<style>
+				#map {
+					width: 100%;
+					height: 400px;
+				} 
+				</style>
+
+				<script src="https://maps.googleapis.com/maps/api/js"></script>
+				    <script>
+				      function initialize() {
+				        var mapCanvas = document.getElementById('map');
+				        var mapOptions = {
+				          center: new google.maps.LatLng(<%= @room.latitude %>, <%= @room.longitude %>),
+				          zoom: 14,
+				          mapTypeId: google.maps.MapTypeId.ROADMAP
+				        }
+				        var map = new google.maps.Map(mapCanvas, mapOptions);
+				        var marker = new google.maps.Marker({
+				        	position: new google.maps.LatLng(<%= @room.latitude %>, <%= @room.longitude %>),
+				        	title: "airlive"
+				        });
+				        marker.setMap(map);
+				      }
+				      google.maps.event.addDomListener(window, 'load', initialize);
+				    </script>
+			</div>
+		</div>
+		<br><hr align="center" width="75%"><br>
+
+<!-- Close by Apartments -->
+<% if @room.nearbys(10).present? %>
+      <h4> Near by Rooms </h4><br>
+		<div class="row">
+			<% for room in @room.nearbys(10) %>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading nearby">
+						<%= image_tag room.photos[0].image.url() %>
+					</div>
+					<div class="panel-body">
+							<%= link_to room.listing_name, room %> <br>
+							(<%= room.distance.round(2) %> miles away) &nbsp; $<%= (room.price) %>
+					</div>
+				</div>
+			</div>
+			<% end %>
+		</div>
+<% end %>
 
     </div>
 	</div>
 </div>
 </div>
+
+

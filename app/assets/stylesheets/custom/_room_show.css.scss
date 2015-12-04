@@ -4,20 +4,20 @@
 
 .row .col-sm-3 {
 	margin-bottom: 20px;
-	color: #2980b9;
+	color: #ff5a5f;
 }
+
+
 
 .roomshow {
-	width: 95%;
+	width: 100%;
+	padding-top: 0px;
 }
 
-.roomshow-body {
-	width: 100%;
-}
 
 .row .col-sm-2 {
 	margin-bottom: 20px;
-	color: #2980b9;
+	color: #ff5a5f;
 }
 
 .text-line-through {
@@ -25,3 +25,19 @@
 	color: #565a5c;
 }
 
+.panel-heading.nearby img {
+  width: 100%;
+}
+.panel-heading.nearby {
+  padding: 0;
+}
+
+.glyphicon-fire.glyphicon  {
+	font-size: 25px;
+}
+
+/* Book now button */
+
+#btn-booknow {
+	margin-top: 20px;
+}

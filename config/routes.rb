@@ -13,6 +13,20 @@ Rails.application.routes.draw do
   resources :rooms
   resources :photos
 
+  resources :rooms do
+    resources :reservations, only: [:create]
+  end
+
+  resources :conversations, only: [:index, :create] do
+    resources :messages, only: [:index, :create ]
+  end
+
+  get '/preload' => 'reservations#preload'
+  get '/preview' => 'reservations#preview'
+  get 'how_it_works' => 'pages#how_it_works'
+
+  get '/trips_history' => 'reservations#trips_history'
+   get '/received_reservations' => 'reservations#received_reservations'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

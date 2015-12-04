@@ -1,10 +1,9 @@
-
+<div class="panel-body space-maker">
 <div class="row">
-<div class="container listings">
 	<div class="col-md-2">
 		<ul class="sidebar-list">
-			<li class="sidebar-item"><%= link_to "Your Listing", rooms_path, class: "sidebar-link active" %></li>
-			<li class="sidebar-item"><%= link_to "Your Reservations", rooms_path, class: "sidebar-link" %></li>
+			<li class="sidebar-item"><%= link_to "Manage Your Listings", rooms_path, class: "sidebar-link active" %></li>
+			<li class="sidebar-item"><%= link_to "Received Reservations", received_reservations_path, class: "sidebar-link" %></li>
 		</ul>
 	</div>
 	<div class="col-md-10">
@@ -18,14 +17,17 @@
 					<div class="col-md-2">
 						<%= image_tag room.photos[0].image.url(:thumb) if room.photos.length > 0 %>
 					</div>
-					<div class="col-md-6">
-						<h4><%= room.listing_name %></h4>
+					<div class="col-md-4">
+						<h5><%= room.listing_name %></h5>
 					</div>
-					<div class="col-md-2">
-						<%= link_to "Update", edit_room_path(room), class: "btn btn-primary" %>
+					<div class="col-xs-4 col-md-2">
+						<%= link_to "Update", edit_room_path(room), class: "label label-primary" %>
 					</div>
-					<div class="col-md-2">
-						<%= link_to "Delete", room_path(room), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-warning" %>
+					<div class="col-xs-4 col-md-2">
+						<%= link_to "View My Listing", room_path(room), class: "label label-success" %>
+					</div>
+					<div class="col-xs-4 col-md-2">
+						<%= link_to "Delete", room_path(room), method: :delete, data: {confirm: "Are you sure?"}, class: "label label-danger" %>
 					</div>
 
 				</div>

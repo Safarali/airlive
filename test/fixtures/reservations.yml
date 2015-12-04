@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  room_id: 
+  start_date: 2015-11-26 12:45:48
+  end_date: 2015-11-26 12:45:48
+  price: 1
+  total: 1
+
+two:
+  user_id: 
+  room_id: 
+  start_date: 2015-11-26 12:45:48
+  end_date: 2015-11-26 12:45:48
+  price: 1
+  total: 1

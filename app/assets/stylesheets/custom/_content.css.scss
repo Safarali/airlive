@@ -1,17 +1,4 @@
-.row-space-1 {
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-
-.row-space-2 {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-
-.row-space-3 {
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
+/* User Description */
 
 .description {
   color: #575757;
@@ -20,31 +7,27 @@
   line-height: 25px;
 }
 
+/* Conversation  Messaging*/
 
-.sidebar-list {
-  padding-left: 0;
-  list-style: none;
+.conversation {
+  color: #7f7f7f;
+  padding: 10px;
 }
 
-.sidebar-item {
-  padding: 10px 0;
-  font-size: 16px;
-  color: #82888a;
-  border-bottom: 1px solid #CCC;
+.conversation:hover, .conversation:focus {
+  background-color: #F5F4F5;
 }
 
-.sidebar-link {
-  color: #82888a;
-  text-decoration: none;
+.container {
+	width: 95%;
 }
 
-.sidebar-link:hover, .sidebar-link:focus {
-  color: #cacccd;
-  text-decoration: none;
+
+.messaging {
+	padding-top: 125px;
+
 }
 
-.active.sidebar-link {
-  color: #565a5c;
-  font-weight: bold;
-  text-decoration: none;
+.conversation-show {
+	padding-top: 125px;
 }

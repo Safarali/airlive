@@ -1,0 +1,32 @@
+.reservation-table td {
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+/* Check in/out field */
+.space {
+	margin-bottom: 15px;
+	padding-right: 0;
+	padding-left: 10px;
+}
+
+.space-1 {
+	padding-left: 0;
+	padding-right: 10px;
+}
+
+.price_tag {
+	background-color: #606567;
+	color: #fff;
+	font-size: 16px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+#message {
+	font-size: 15px;
+	color: #e00007;
+}
+
+
