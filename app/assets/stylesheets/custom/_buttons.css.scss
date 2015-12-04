@@ -28,7 +28,7 @@
 
 /* For facebook button */
 
-#fbb {
+.fbb .btn.btn-primary {
   background-color: #3B5998;
   border: 1px solid #3B5998;
   width: 100%;
@@ -37,7 +37,7 @@
  } 
 
 
-#fbb:hover {
+.fbb .btn.btn-primary:hover {
   border-color: #3B5998;
   border-bottom-color: #3B5998; 
   background-color: #4e69a2; 
