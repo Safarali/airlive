@@ -28,7 +28,7 @@
 
 /* For facebook button */
 
-.fbb .btn-primary.btn {
+#fbb {
   background-color: #3B5998;
   border: 1px solid #3B5998;
   width: 100%;
@@ -37,29 +37,15 @@
  } 
 
 
-.fbb .btn-primary.btn:hover {
+#fbb:hover {
   border-color: #3B5998;
   border-bottom-color: #3B5998; 
   background-color: #4e69a2; 
   outline: none;
 }
 
-/* Google button */
-
-.google-button .btn-primary.btn {
-  background-color: #fff;
-  border: 2px solid #EF5350;
-  width: 100%;
-  margin-top: 10px;
-  color: #F44336
- } 
 
 
-.google-button .btn-primary.btn:hover {
-  border-color: #EF5350;
-  border-bottom-color: #EF5350;  
-  outline: none;
-}
 
 /* Customizing Room-create form's button */
 .actions #btn-create-room {
@@ -197,7 +183,9 @@
 }
 
 
-
+.form-footer {
+  color: #82888a;
+}
 
 
 
