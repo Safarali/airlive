@@ -23,7 +23,7 @@
 									<%= link_to user_path(@room.user) do %>
 										<%= image_tag @room.user.avatar.url, class: "img-circle avatar-large" %><% end %><% end %><br><br>
 										<%= @room.user.fullname %>
-										<% if @room.user != current_user %>
+										<% if @room.user != current_user && user_signed_in? %>
 					  		<%= link_to "Contact", conversations_path(sender_id: current_user.id, recipient_id: @room.user.id), method: 'post', id: "become_host", class: "btn btn-primary" %> <% end %>
 									</div>
 
@@ -135,7 +135,24 @@
 							</div>
 						</div> <br>
 					<hr align="center" width="75%"><br>
+					<!-- Reviews -->
+					<div class="row">
+						<div class="col-md-12">
+							<h4 id="room_show_title">Reviews <span id="average_rating"></span>(<%= @reviews.count %>)</h4>
+						
+								<div>
+									<%= render 'reviews/form' if @booked && !@hasReview %>
+									<hr align="center" width="75%"><br>
 
+								</div>
+								<div>
+									<%= render 'reviews/list' %>
+								</div>
+					
+						</div>
+					</div>
+
+				
 						<!-- Google maps -->
 						<div class="row">
 							<div class="col-md-12">
@@ -194,4 +211,12 @@
 	</div>
 </div>
 </div>
+
+		<script>
+			$('#average_rating').raty({
+				path: '/assets',
+				readOnly: true,
+				score: <%= @room.average_rating %>
+			});
+		</script>
 

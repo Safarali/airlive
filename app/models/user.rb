@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
 
   has_many :rooms, dependent: :destroy
   has_many :reservations, dependent: :destroy
+  has_many :reviews
 
   
 
