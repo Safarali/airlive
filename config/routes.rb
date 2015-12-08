@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get '/received_reservations' => 'reservations#received_reservations'
   post '/notify' => 'reservations#notify'
   post '/trips_history' => 'reservations#trips_history'
+  get '/search' =>'pages#search'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
