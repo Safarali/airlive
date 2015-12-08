@@ -5,7 +5,7 @@
 	background-attachment: scroll;
 	background-repeat: no-repeat;
 	position: absolute;
-	background-position: left;
+	background-position: center;
    	height: 650px;
     left: 0;
     right: 0;
@@ -18,7 +18,7 @@
 	font-size: 50px;
 	line-height: 66px;
 	color: white;
-	margin-top: 100px;
+	margin-top: 125px;
 	font-family: 'Montserrat', sans-serif;
 	opacity: 1;
 }
@@ -27,27 +27,88 @@
 	font-size: 18px;
 	line-height: 20px;
 	color: white;
-	margin-bottom: 30px;
+	margin-bottom: 60px;
 	font-family: 'Montserrat', sans-serif;
 }
 
 .wrapper {
-	padding-bottom: 700px;
+	padding-bottom: 680px;
 }
 
-
-/*.search_desk {
+/* Home Search Bar */
+.search_desk {
 	border: none;
 	background-color: rgba(0,0,0,0.5);
-   
-} */
-
-
-.home_search {
-	opacity: 0.9;
+	margin-top: 60px;   
 }
 
-.in_out_search, .place_search {
+.go_place {
+	margin-bottom: 5px;
+}
+
+.in_out_date  {
+	margin-bottom: 5px;
+
+}
+
+#go_place_border {
+	margin-right: 0;
+}
+
+
+
+/* Google maps */
+
+#sidebar {
+	float: right;
+	width: 300px;
+}
+
+#sidebar #widget {
+	width: 250px;
+	height: 400px;
 	margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+	margin-left: 45px;
+
 }
 
+
+/* Discovery */
+
+.discovery {
+	background-size: cover;
+	background-position: center;
+	height: 326px;
+	margin-bottom: 10px;
+
+}
+
+.home_container {
+	width: 95%;
+}
+
+.va-container {
+	display: table;
+	width: 100%;
+	height: 100%;
+	font-weight: bold;
+}
+
+.va-middle {
+	color: #fff;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.weekend_font h3 {
+	font-size: 32px;
+	line-height: 35px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.weekend_font p {
+	font-size: 16px;
+	line-height: 23px;
+	font-family: 'Montserrat', sans-serif;
+}

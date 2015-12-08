@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-  	@rooms = Room.all
+  	@rooms = Room.limit(6)
   end
 
   def how_it_works
