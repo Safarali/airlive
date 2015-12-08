@@ -31,12 +31,12 @@ end
 	 			business: 'safarnov-facilitator@gmail.com',
 	 			cmd: '_xclick',
 	 			upload: 1,
-	 			notify_url: 'http://94c40c28.ngrok.io/notify',
+	 			notify_url: 'http://airlive.heroku.com/notify',
 	 			amount: @reservation.total,
 	 			item_name: @reservation.room.listing_name,
 	 			item_number: @reservation.id ,
 	 			quantity: '1',
-	 			return: 'http://94c40c28.ngrok.io/trips_history'
+	 			return: 'http://airlive.heroku.com/trips_history'
 	 		}
 
 	 		redirect_to "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
