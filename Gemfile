@@ -24,6 +24,7 @@ gem 'ransack'
 
 
 
+
 gem 'devise'
 # For notifications
 gem 'toastr-rails'

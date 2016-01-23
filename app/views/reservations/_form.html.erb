@@ -70,7 +70,7 @@
 				$('#reservation_start_date').datepicker({
 					dateFormat: 'dd-mm-yy',
 					minDate: 0,
-					maxDate: '3m',
+					maxDate: '9m',
 					beforeShowDay: unavailable,
 					onSelect: function(selected) {
 						$('#reservation_end_date').datepicker("option", "minDate", selected);
@@ -115,7 +115,7 @@
 				$('#reservation_end_date').datepicker({
 					dateFormat: 'dd-mm-yy',
 					minDate: 0,
-					maxDate: '3m',
+					maxDate: '9m',
 					beforeShowDay: unavailable,
 					onSelect: function(selected) {
 						$('#reservation_start_date').datepicker("option", "maxDate", selected);
