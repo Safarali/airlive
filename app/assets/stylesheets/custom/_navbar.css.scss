@@ -26,7 +26,7 @@ body {
 .navbar-default .navbar-brand {
   color: #e00007;
   font-size: 2em;
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   
 }
@@ -36,13 +36,13 @@ body {
 }
 
 .navbar .nav > li > a {
-	color: #e00007;
+  color: #525252;
 	font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 }
 
 .navbar .nav > li > a:hover, .navbar .nav > li > a:focus  {
-	color: #ff7e82;
+  color: #171818;
 }
 
 
@@ -74,12 +74,14 @@ body {
   text-decoration: none;
 }
 
-/* Toggle Button */
+/* Toogle Menu */
 
 .navbar-default .navbar-toggle {
   background-color: white;
   border: white;
   background: white;
+  margin-top: 12px;
+
   }
 
 .navbar-default .navbar-toggle:hover {
@@ -100,8 +102,10 @@ body {
   .navbar-default .navbar-toggle .icon-bar {
     background-color: #e00007;
     padding-right: 30px;
+    border: 2px #e00007;
+    padding: 1px 16px 2px;
   }
 
   .navbar-default .navbar-toggle .icon-bar:hover {
-    background-color: #ff7e82;
+    background-color: #e00007;
   }
