@@ -1,5 +1,5 @@
 .banner {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('swiss.jpeg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('boat-house.jpg');
 	text-align: center;
 	background-size: cover;
 	background-attachment: scroll;
@@ -39,7 +39,7 @@
 .search_desk {
 	border: none;
 	background-color: rgba(0,0,0,0.5);
-	margin-top: 150px;   
+	margin-top: 150px;
 }
 
 @media screen and (max-width: 768px) {
