@@ -1,5 +1,5 @@
 .banner {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('boat-house.jpg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('hero.jpg');
 	text-align: center;
 	background-size: cover;
 	background-attachment: scroll;
@@ -18,7 +18,7 @@
 	font-size: 65px;
 	line-height: 66px;
 	color: white;
-	margin-top: 125px;
+	margin-top: 175px;
 	font-family: 'Montserrat', sans-serif;
 	opacity: 1;
 }
@@ -42,13 +42,36 @@
 	margin-top: 150px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen  and (max-width: 965px){
+	.banner h1 {
+		font-size: 40px;
+	}
 	.search_desk {
-	margin-top: 60px;
+		width: 50%;
+		margin: 50px auto;
+	}
+}
+
+// @media screen  and (max-width: 950px){
+// 	.banner h1 {
+// 		font-size: 40px;
+// 	}
+// 	.search_desk {
+// 		width: 50%;
+// 		margin: 50px auto;
+// 	}
+// }
+
+
+
+@media screen and (max-width: 550px) {
+	.search_desk {
+	margin-top: 40px;
+	width: 80%;
 	}
 
 	.banner h1 {
-		font-size: 50px;
+		font-size: 40px;
 	}
 
 	.banner p {
