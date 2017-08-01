@@ -38,14 +38,18 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: 'smtp.mandrillapp.com',
-    port: 587,
-    enable_startls_auto: true,
-    user_name: 'mr.safarali@gmail.com',
-    password: 'IgabmbSZBCLoE6xBK2Dp6w',
-    authentication: 'login'
+  # Raises error for missing translations
+  # config.action_view.raise_on_missing_translations = true
+   config.action_mailer.perform_deliveries = true
+   config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
+   config.action_mailer.delivery_method = :smtp
+   config.action_mailer.smtp_settings = {
+    domain:         "gmail.com",
+    address:       'smtp.gmail.com',
+    port:          '587',
+    authentication: :plain,
+    enable_starttls_auto: true,
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"]
   }
 end
