@@ -88,8 +88,8 @@ config.action_mailer.default_url_options = { :host => 'airlive.herokuapp.com' }
  domain: 'airlive.herokuapp.com',
  authentication: "plain",
  enable_starttls_auto: true,
- user_name: ENV['GMAIL_USERNAME'],
- password: ENV['GMAIL_PASSWORD']
+ user_name: ENV['SENDGRID_USERNAME'],
+ password: ENV['SENDGRID_PASSWORD']
 }
 
   config.paperclip_defaults = {
