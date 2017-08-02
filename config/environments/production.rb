@@ -88,8 +88,8 @@ Rails.application.configure do
  domain: "airlive.herokuapp.com",
  authentication: "plain",
  enable_starttls_auto: true,
- user_name: 'mr.webapps@gmail.com',
- password: 'hello2216?!'
+ user_name: ENV["GMAIL_USERNAME"],
+ password: ENV["GMAIL_PASSWORD"]
 }
 
   config.paperclip_defaults = {
